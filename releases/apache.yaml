@@ -1,0 +1,15 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: apache
+  namespace: demo
+  annotations:
+    fluxcd.io/automated: "false"
+    fluxcd.io/tag.chart-image: glob:3.1.1-debian-9-*
+spec:
+  releaseName: apache
+  chart:
+    git: ssh://git@github.com:praveensams/helm
+    ref: master
+    path: charts/apache
