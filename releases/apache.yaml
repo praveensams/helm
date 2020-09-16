@@ -3,10 +3,9 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: apache
-  namespace: demo
+  namespace: apache
   annotations:
     fluxcd.io/automated: "false"
-    fluxcd.io/tag.chart-image: glob:3.1.1-debian-9-*
 spec:
   releaseName: apache
   chart:
