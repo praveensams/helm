@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: httpd
+        image: praveensam/apache:v111
         ports:
         - containerPort: 80
 ---
